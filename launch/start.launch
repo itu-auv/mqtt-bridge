@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="mqtt_bridge" type="mosquitto.sh" name="mosquitto_server" args=" -c $(find mqtt_bridge)/config/mosquitto.conf" output="screen"/>
+    
+    <node pkg="mqtt_bridge" type="ros2mqtt.py" name="ros2mqtt_node" output="screen">
+        <rosparam file="$(find mqtt_bridge)/config/default.yaml" command="load"/>
+    </node>
+</launch>
