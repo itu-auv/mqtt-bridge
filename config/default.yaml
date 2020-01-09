@@ -1,4 +1,4 @@
-topic_prefix: /turquoise/
+topic_prefix: /
 hostname: localhost
 port: 1883
 keepalive: 60
